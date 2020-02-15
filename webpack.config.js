@@ -49,5 +49,6 @@ module.exports = {
       contentBase: path.resolve(__dirname, 'public/javascripts'),
       compress: true,
       port: 9000,
+      hot: true,
    },
 };
