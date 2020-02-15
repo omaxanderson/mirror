@@ -45,11 +45,9 @@ module.exports = {
    performance: {
       hints: false,
    },
-   /*
    devServer: {
-      contentBase: path.join(__dirname, 'dist'),
+      contentBase: path.resolve(__dirname, 'public/javascripts'),
       compress: true,
       port: 9000,
    },
-    */
 };

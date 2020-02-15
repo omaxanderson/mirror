@@ -10,8 +10,9 @@ class Box extends React.Component {
 }
 
 if (document.getElementById('RedBox')) {
-    console.log('noicee');
+    console.log('noiceee');
     ReactDOM.render(<Box />, document.getElementById('RedBox'));
 } else {
     console.log('not noice');
+    console.log('yoo');
 }

@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "start": "npm run build && node dist/app.js",
-    "start:dev": "concurrently --names=server,ui \"nodemon --config tsconfig.json app.ts\" \"webpack-dev-server\"",
+    "start:dev": "concurrently --names=server,ui \"nodemon --config tsconfig.json app.ts\" \"webpack --watch\"",
     "build:ui": "webpack",
     "build": "tsc"
   },
@@ -30,6 +30,7 @@
     "@types/node": "^13.7.1",
     "babel-loader": "^8.0.6",
     "babel-plugin-dynamic-import-node": "^2.3.0",
+    "concurrently": "^5.1.0",
     "nodemon": "^2.0.2",
     "webpack": "^4.41.6",
     "webpack-cli": "^3.3.11",
