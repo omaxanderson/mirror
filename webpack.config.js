@@ -1,5 +1,6 @@
 const path = require('path');
 const glob = require('glob');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 
 const entries = () => {
    let entries = {};
@@ -31,12 +32,57 @@ module.exports = {
                   ],
                },
             },
-         }
+         },
+         {
+            test: /\.style\.s(a|c)ss$/,
+            loader: [
+               // 'style-loader', //  MiniCssExtractPlugin.loader,
+               MiniCssExtractPlugin.loader,
+               {
+                  loader: 'css-loader',
+                  options: {
+                     modules: true,
+                     sourceMap: true,
+                     esModule: true,
+                  },
+               },
+               {
+                  loader: 'sass-loader',
+                  options: {
+                     sourceMap: true,
+                  },
+               },
+            ],
+         },
+         {
+            test: /\.s(a|c)ss$/,
+            exclude: /\.style.(s(a|c)ss)$/,
+            loader: [
+               // 'style-loader', // : MiniCssExtractPlugin.loader,
+               MiniCssExtractPlugin.loader,
+               'css-loader',
+               {
+                  loader: 'sass-loader',
+                  options: {
+                     sourceMap: true,
+                  },
+               },
+            ],
+         },
       ],
    },
+   resolve: {
+      extensions: ['.js', '.jsx', '.scss'],
+   },
+   plugins: [
+      new MiniCssExtractPlugin({
+         filename: '[name].css',
+         chunkFilename: '[id].css',
+      }),
+   ],
    output: {
       filename: '[name].js',
-      path: path.resolve(__dirname, 'public/javascripts'),
+      path: path.resolve(__dirname, 'public'),
    },
    node: {
       fs: 'empty',
@@ -46,7 +92,7 @@ module.exports = {
       hints: false,
    },
    devServer: {
-      contentBase: path.resolve(__dirname, 'public/javascripts'),
+      contentBase: path.resolve(__dirname, 'public'),
       compress: true,
       port: 9000,
       hot: true,

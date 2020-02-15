@@ -1,0 +1,40 @@
+$spacing-md: .8rem;
+$spacing-lg: 1.6rem;
+$spacing-sm: .4rem;
+
+html {
+  box-sizing: border-box;
+}
+
+$settings-height: 400px;
+.Settings {
+  padding: $spacing-md;
+  position: absolute;
+  height: $settings-height;
+  width: 20vw;
+  transition: .3s;
+  left: 0;
+  top: 0;
+  background-color: bisque;
+
+  &__hidden {
+    @extend .Settings;
+    top: calc(-1 * (#{$settings-height} + 40px));
+  }
+}
+
+input {
+  padding: $spacing-sm;
+  border-radius: 3px;
+  border: 1px solid gray;
+}
+
+label + input {
+  margin-left: $spacing-md;
+}
+
+body {
+  min-height: 100vh;
+  min-width: 100%;
+  margin: 0;
+}

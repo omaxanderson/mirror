@@ -1,0 +1,28 @@
+html {
+  box-sizing: border-box; }
+
+._1SGlBnV7PmuhXqkkcSrCBz, ._2Fxkefdz2m9UsaxhqMtBGb {
+  padding: 0.8rem;
+  position: absolute;
+  height: 400px;
+  width: 20vw;
+  transition: .3s;
+  left: 0;
+  top: 0;
+  background-color: bisque; }
+  ._2Fxkefdz2m9UsaxhqMtBGb {
+    top: calc(-1 * (400px + 40px)); }
+
+input {
+  padding: 0.4rem;
+  border-radius: 3px;
+  border: 1px solid gray; }
+
+label + input {
+  margin-left: 0.8rem; }
+
+body {
+  min-height: 100vh;
+  min-width: 100%;
+  margin: 0; }
+
