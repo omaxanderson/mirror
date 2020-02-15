@@ -3,8 +3,9 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node dist/app.js",
-    "start:dev": "nodemon app.ts",
+    "start": "npm run build && node dist/app.js",
+    "start:dev": "nodemon --config tsconfig.json app.ts",
+    "build:ui": "tsc --project tsconfig.ui.json",
     "build": "tsc"
   },
   "dependencies": {
@@ -15,10 +16,19 @@
     "morgan": "~1.9.1",
     "node-sass-middleware": "^0.11.0",
     "pug": "2.0.0-beta11",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
     "typescript": "^3.7.5"
   },
   "devDependencies": {
+    "@babel/core": "^7.8.4",
+    "@babel/plugin-proposal-class-properties": "^7.8.3",
+    "@babel/plugin-syntax-dynamic-import": "^7.8.3",
+    "@babel/plugin-syntax-object-rest-spread": "^7.8.3",
+    "@babel/polyfill": "^7.8.3",
     "@types/node": "^13.7.1",
-    "nodemon": "^2.0.2"
+    "babel-plugin-dynamic-import-node": "^2.3.0",
+    "nodemon": "^2.0.2",
+    "webpack": "^4.41.6"
   }
 }

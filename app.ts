@@ -4,9 +4,12 @@ import * as path from 'path';
 import cookieParser from 'cookie-parser';
 import logger from 'morgan';
 import sassMiddleware from 'node-sass-middleware';
+import * as http from 'http';
 
-import indexRouter from './routes/index';
+import indexRouter from './routes';
 import usersRouter from './routes/users';
+
+const debug = require('debug')('untitled:server');
 
 const app = express();
 
@@ -45,9 +48,6 @@ app.use(function(err, req, res, next) {
   res.render('error');
 });
 
-const debug = require('debug')('untitled:server');
-const http = require('http');
-
 /**
  * Get port from environment and store in Express.
  */
@@ -66,6 +66,7 @@ const server = http.createServer(app);
  */
 
 server.listen(port);
+console.log(`Listening on port ${port}`);
 server.on('error', onError);
 server.on('listening', onListening);
 
