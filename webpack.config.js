@@ -35,8 +35,8 @@ module.exports = {
       ],
    },
    output: {
-      filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
+      filename: '[name].js',
+      path: path.resolve(__dirname, 'public/javascripts'),
    },
    node: {
       fs: 'empty',
