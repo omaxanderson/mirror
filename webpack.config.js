@@ -25,10 +25,11 @@ module.exports = {
                options: {
                   presets: ['@babel/react'],
                   plugins: [
+                     "@babel/plugin-proposal-decorators",
                      "@babel/plugin-syntax-object-rest-spread",
                      "@babel/plugin-proposal-class-properties",
                      "@babel/plugin-syntax-dynamic-import",
-                     "babel-plugin-dynamic-import-node"
+                     "babel-plugin-dynamic-import-node",
                   ],
                },
             },

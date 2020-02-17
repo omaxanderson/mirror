@@ -2,10 +2,8 @@ html {
   box-sizing: border-box; }
 
 ._1SGlBnV7PmuhXqkkcSrCBz, ._2Fxkefdz2m9UsaxhqMtBGb {
-  padding: 0.8rem;
+  padding: 0 0.8rem 0.8rem 0.8rem;
   position: absolute;
-  height: 400px;
-  width: 20vw;
   transition: .3s;
   left: 0;
   top: 0;
@@ -25,4 +23,50 @@ body {
   min-height: 100vh;
   min-width: 100%;
   margin: 0; }
+
+._3PlxWD3e_crYAZRZlm-GA0 {
+  cursor: pointer;
+  position: absolute; }
+
+._2PbLbGgWKR01rNh9z4XWri {
+  font-family: 'Source Sans Pro', sans-serif; }
+  ._1nuopqlBiQ8OWoRm6b-NeU {
+    text-align: center; }
+  ._2q0XrBAMjvQZCscHG_pvjB {
+    text-align: right; }
+
+html {
+  box-sizing: border-box; }
+
+.icOEmJxrxLrZNTWzTKpM_, ._3QuMF7o1BA5dEw1UYpgxxQ {
+  padding: 0 0.8rem 0.8rem 0.8rem;
+  position: absolute;
+  transition: .3s;
+  left: 0;
+  top: 0;
+  background-color: bisque; }
+  ._3QuMF7o1BA5dEw1UYpgxxQ {
+    top: calc(-1 * (400px + 40px)); }
+
+input {
+  padding: 0.4rem;
+  border-radius: 3px;
+  border: 1px solid gray; }
+
+label + input {
+  margin-left: 0.8rem; }
+
+body {
+  min-height: 100vh;
+  min-width: 100%;
+  margin: 0; }
+
+._3Xy_-1-S54R9W7S6FUvFdu {
+  cursor: pointer;
+  position: absolute; }
+
+._1dymC8a6xI66lqcrGw-nl {
+  background-color: antiquewhite;
+  position: absolute;
+  padding: 0.8rem; }
 

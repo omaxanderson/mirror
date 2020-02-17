@@ -8,10 +8,10 @@ html {
 
 $settings-height: 400px;
 .Settings {
-  padding: $spacing-md;
+  padding: 0 $spacing-md $spacing-md $spacing-md;
   position: absolute;
-  height: $settings-height;
-  width: 20vw;
+  // height: $settings-height;
+  // width: 20vw;
   transition: .3s;
   left: 0;
   top: 0;
@@ -37,4 +37,9 @@ body {
   min-height: 100vh;
   min-width: 100%;
   margin: 0;
+}
+
+.Draggable {
+  cursor: pointer;
+  position: absolute;
 }

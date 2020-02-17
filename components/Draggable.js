@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import style from './Main.style.scss';
 
 export default class Draggable extends React.Component {
     constructor(props) {
@@ -56,7 +57,7 @@ export default class Draggable extends React.Component {
 
     render() {
         return (
-            <div id={`${this.props.dragElementId}_wrapper`} style={{ position: 'absolute', ...this.props.style }}>
+            <div id={`${this.props.dragElementId}_wrapper`} className={style.Draggable} style={this.props.style}>
                 { this.props.children }
             </div>
         );
@@ -67,4 +68,9 @@ Draggable.propTypes = {
     dragElementId: PropTypes.string.isRequired,
     onDragDrop: PropTypes.func,
     onMouseMove: PropTypes.func,
+};
+
+Draggable.defaultProps = {
+    onDragDrop: () => {},
+    onMouseMove: () => {},
 };

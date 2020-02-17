@@ -3,6 +3,8 @@ import ReactDOM from 'react-dom';
 import {PhotoshopPicker, SketchPicker} from 'react-color';
 import RedBox from "./RedBox";
 import styles from './Main.style.scss';
+import Draggable from "./Draggable";
+import Clock from "./Clock";
 
 class Main extends React.Component {
     constructor(props) {
@@ -61,14 +63,19 @@ class Main extends React.Component {
         return (
             <>
                 <RedBox />
+                <Draggable dragElementId="clock">
+                    <Clock />
+                </Draggable>
                 <div
                     className={settingsOpen ? styles.Settings : styles.Settings__hidden}
                     onChange={(e) => {
                         console.log(e.target.value);
                     }}
                 >
-                    <label htmlFor="bg-col">Background Color</label>
+                    <h3>Settings</h3>
+                    <p>Background Color</p>
                     <SketchPicker
+                        disableAlpha
                         color={this.state.color}
                         onChange={this.onColorChange}
                     />
